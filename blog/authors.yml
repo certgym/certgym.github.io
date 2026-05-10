@@ -1,0 +1,23 @@
+certgym:
+  name: CertGym
+  title: CertGym Master
+  url: https://www.certgym.com
+  image_url: https://github.com/certgym.png
+  page: true
+    # customize the url of the author page at /blog/authors/<permalink>
+  socials:
+    instagram: certgym_com
+    website: https://www.certgym.com
+
+kdchang:
+  name: KD Chang
+  title: Founder of CertGym
+  url: https://www.kdchang.net
+  image_url: https://github.com/kdchang.png
+  page: true
+    # customize the url of the author page at /blog/authors/<permalink>
+  socials:
+    x: kaidichang
+    github: kdchang
+    instagram: kdchang_net
+    website: https://www.kdchang.net

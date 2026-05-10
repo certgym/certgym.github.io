@@ -1,0 +1,78 @@
+/* ── Hero Banner ── */
+.heroBanner {
+  padding: 7rem 2rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #061a2b;
+}
+
+/* Subtle grid texture — evokes flashcard grids and answer sheets */
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(250, 200, 44, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(250, 200, 44, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Teal-yellow center glow + edge fade */
+.heroBanner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 60% 50% at 50% 45%,
+      rgba(250, 200, 44, 0.1) 0%,
+      transparent 65%
+    ),
+    radial-gradient(ellipse 90% 80% at 50% 55%, transparent 30%, #061a2b 78%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Container above pseudo-elements */
+.heroBanner :global(.container) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Orange → yellow gradient title, mirroring the logo shield accent → body */
+.heroBanner :global(.hero__title) {
+  background: linear-gradient(135deg, #f26531 0%, #fac82c 45%, #f0ece6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 1.2rem;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.heroBanner :global(.hero__subtitle) {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 auto 0.5rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 4.5rem 1.5rem 3.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
