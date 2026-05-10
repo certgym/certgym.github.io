@@ -1,6 +1,7 @@
 ---
 slug: how-to-study-for-certification-exam
 title: 備考不再靠死背——用 CertGym 讓考證照變得有趣又高效
+date: 2026-01-28 11:33:41
 authors: certgym
 tags:
   - 備考方法
