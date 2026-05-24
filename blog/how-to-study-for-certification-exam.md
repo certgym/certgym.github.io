@@ -106,5 +106,5 @@ CertGym 學習社群每天都有考生分享：
 
 加入學習社群：
 - [Facebook 學習交流社群](https://facebook.com/groups/certgym)
-- [Instagram](https://www.instagram.com/certgym_com)
+- [Instagram](https://www.instagram.com/certgym)
 - [訂閱電子報](https://certgym.substack.com/)

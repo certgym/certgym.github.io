@@ -2,7 +2,7 @@
 https://www.certgym.com
 👋 追蹤、按讚、訂閱加分享，獲得更多職涯發展與個人成長學習資源和重點精華 💪
 《CertGym 證照道館》 🔖 
-FB：https://www.facebook.com/certgym
+FB：https://www.facebook.com/CertGymTW
 IG：https://www.instagram.com/certgym
 電子報：https://certgym.substack.com/
 

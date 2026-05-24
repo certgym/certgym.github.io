@@ -163,11 +163,11 @@ const config: Config = {
             },
             {
               label: "追蹤 Instagram",
-              href: "https://www.instagram.com/certgym_com",
+              href: "https://www.instagram.com/certgym",
             },
             {
               label: "追蹤 Facebook",
-              href: "https://www.facebook.com/certgym",
+              href: "https://www.facebook.com/CertGymTW",
             },
           ],
         },
