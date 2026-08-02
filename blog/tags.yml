@@ -1,32 +1,22 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+備考方法:
+  label: 備考方法
+  permalink: /備考方法
+  description: 高效備考技巧與學習方法相關文章
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+閃卡:
+  label: 閃卡
+  permalink: /閃卡
+  description: 閃卡與間隔重複記憶法相關文章
 
-旅行:
-  label: 旅行
-  permalink: /旅行
-  description: 旅行探索相關文章
+題庫練習:
+  label: 題庫練習
+  permalink: /題庫練習
+  description: 題庫模擬測驗與解題技巧相關文章
 
-打卡:
-  label: 打卡
-  permalink: /打卡
-  description: 城市打卡挑戰
-
-景點:
-  label: 景點
-  permalink: /景點
-  description: 台灣城市景點推薦
-
-城市探索:
-  label: 城市探索
-  permalink: /城市探索
-  description: 城市探索主題文章
+錯題收藏:
+  label: 錯題收藏
+  permalink: /錯題收藏
+  description: 錯題管理與弱點複習相關文章
 
 CertGym:
   label: CertGym

@@ -58,7 +58,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="CertGym 證照道館——透過閃卡、題庫練習、錯題收藏功能，讓備考變得有趣又高效。支援 AWS、Azure、GCP、PMP、GEPT 等熱門證照，隨時隨地敏锐備考，輕鬆取證。"
+      description="CertGym 證照道館——透過閃卡、題庫練習、錯題收藏功能，讓備考變得有趣又高效。支援會計師、領隊導遊等國家考試，金融證照、iPASS AI、PMP、AWS 等熱門證照，隨時隨地高效備考，輕鬆取證。"
     >
       <HomepageHeader />
       <StatsBar />
