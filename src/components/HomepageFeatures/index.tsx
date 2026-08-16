@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     icon: "📝",
     description: (
       <>
-        涵蓋會計師、領隊、導遊等國家考試，以及金融證照、iPASS AI、PMP、AWS
+        涵蓋會計師、領隊、導遊等國家考試，以及金融證照、iPAS AI、PMP、AWS
         等熱門證照題庫，支援模擬測驗與即時解析，練習更有效率，快速掌握考點規律。
       </>
     ),
