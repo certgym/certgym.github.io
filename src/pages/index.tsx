@@ -11,7 +11,7 @@ import styles from "./index.module.css";
 function StatsBar(): ReactNode {
   const stats = [
     { value: "500+", label: "精選備考題目" },
-    { value: "50+", label: "熱門證照科目" },
+    { value: "50+", label: "熱門考試科目" },
     { value: "閃卡", label: "智慧閃卡複習" },
     { value: "錯題", label: "錯題收藏分析" },
     { value: "iOS & Android", label: "免費下載" },
