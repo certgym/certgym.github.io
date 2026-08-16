@@ -6,9 +6,9 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "CertGym 證照道館",
-  tagline: "閃卡、題庫、錯題收藏，讓備考變得有趣又高效，幫助你邁向證照大師之路",
+  tagline:
+    "一站式考試與證照學習平台，閃卡、題庫、錯題一次掌握，讓備考更有趣、更高效",
   favicon: "/img/favicon.ico",
-
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
