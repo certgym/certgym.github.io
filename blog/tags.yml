@@ -22,3 +22,8 @@ CertGym:
   label: CertGym
   permalink: /certgym
   description: CertGym 證照道館相關文章
+
+模擬考:
+  label: 模擬考
+  permalink: /模擬考
+  description: 歷屆試題模擬考與考前實戰演練相關文章

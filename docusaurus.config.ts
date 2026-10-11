@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "CertGym 證照道館",
   tagline:
-    "一站式考試與證照學習平台，閃卡、題庫、錯題一次掌握，讓備考更有趣、更高效",
+    "國家考試與專業證照的歷屆試題、模擬考練習 App：題庫、模擬考、閃卡、錯題複習一次掌握",
   favicon: "/img/favicon.ico",
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -127,8 +127,8 @@ const config: Config = {
           position: "left",
         },
         {
-          href: "#",
-          label: "立即下載",
+          to: "/#download",
+          label: "下載 App",
           position: "right",
           className: "navbar__download-cta",
         },
@@ -138,7 +138,7 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "備考資源",
+          title: "CertGym",
           items: [
             {
               label: "學習資源",
@@ -175,12 +175,16 @@ const config: Config = {
           title: "下載 App",
           items: [
             {
-              label: "App Store (即將上線)",
-              href: "#",
+              label: "App Store（即將上架）",
+              to: "/#download",
             },
             {
-              label: "Google Play (即將上線)",
-              href: "#",
+              label: "Google Play（即將上架）",
+              to: "/#download",
+            },
+            {
+              label: "隱私權政策",
+              to: "/privacy",
             },
           ],
         },
@@ -188,7 +192,7 @@ const config: Config = {
           title: "聯絡我們",
           items: [
             {
-              label: "發送信件",
+              label: "聯絡信箱",
               to: "mailto:certgym.com@gmail.com",
             },
           ],

@@ -1,6 +1,6 @@
 certgym:
   name: CertGym
-  title: CertGym Master
+  title: CertGym 證照道館
   url: https://www.certgym.com
   image_url: https://github.com/certgym.png
   page: true

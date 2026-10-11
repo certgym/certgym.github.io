@@ -1,78 +1,351 @@
-/* ── Hero Banner ── */
-.heroBanner {
-  padding: 7rem 2rem 6rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: #061a2b;
+/* ── Hero ── */
+.hero {
+  padding: 5.5rem 0 5rem;
+  background: var(--ct-bg-base);
+  border-bottom: 1px solid var(--ct-line);
 }
 
-/* Subtle grid texture — evokes flashcard grids and answer sheets */
-.heroBanner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(250, 200, 44, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(250, 200, 44, 0.07) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 4rem;
 }
 
-/* Teal-yellow center glow + edge fade */
-.heroBanner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      ellipse 60% 50% at 50% 45%,
-      rgba(250, 200, 44, 0.1) 0%,
-      transparent 65%
-    ),
-    radial-gradient(ellipse 90% 80% at 50% 55%, transparent 30%, #061a2b 78%);
-  pointer-events: none;
-  z-index: 1;
+.eyebrow {
+  margin: 0 0 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ct-gold);
 }
 
-/* Container above pseudo-elements */
-.heroBanner :global(.container) {
-  position: relative;
-  z-index: 2;
-}
-
-/* Orange → yellow gradient title, mirroring the logo shield accent → body */
-.heroBanner :global(.hero__title) {
-  background: linear-gradient(135deg, #f26531 0%, #fac82c 45%, #f0ece6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: clamp(1.6rem, 5vw, 3rem);
+.heroTitle {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.25rem, 5.2vw, 3.5rem);
   font-weight: 800;
-  letter-spacing: -0.01em;
-  line-height: 1.35;
-  margin-bottom: 1.2rem;
-  word-break: keep-all;
-  overflow-wrap: break-word;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--ct-text);
 }
 
-.heroBanner :global(.hero__subtitle) {
-  font-size: 1.1rem;
+.heroLead {
+  max-width: 34em;
+  margin: 0 0 2rem;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--ct-text-muted);
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.btnPrimary {
+  background: var(--ct-gold);
+  color: var(--ct-ink);
+}
+
+.btnPrimary:hover {
+  background: var(--ct-gold-hover);
+  color: var(--ct-ink);
+  text-decoration: none;
+}
+
+.btnGhost {
+  border: 1px solid var(--ct-line-strong);
+  color: var(--ct-text);
+}
+
+.btnGhost:hover {
+  border-color: var(--ct-gold);
+  color: var(--ct-gold);
+  text-decoration: none;
+}
+
+.heroNote {
+  margin: 1.25rem 0 0;
+  font-size: 0.875rem;
+  color: var(--ct-text-subtle);
+}
+
+/* ── Phone mock (illustrative) ── */
+.phone {
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+  padding: 12px;
+  border-radius: 40px;
+  background: #050c18;
+  border: 1px solid var(--ct-line-strong);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.phoneScreen {
+  padding: 1.25rem 1rem 1.5rem;
+  border-radius: 30px;
+  background: var(--ct-bg-base);
+}
+
+.phoneBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: var(--ct-text-muted);
+}
+
+.phoneProgress {
+  font-variant-numeric: tabular-nums;
+  color: var(--ct-gold);
+  font-weight: 600;
+}
+
+.questionCard {
+  padding: 1rem;
+  border-radius: 14px;
+  background: var(--ct-paper);
+  color: var(--ct-ink);
+}
+
+.questionText {
+  margin: 0 0 0.9rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.option,
+.optionCorrect {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.45rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 10px;
+  font-size: 0.8125rem;
+  background: #fdfbf5;
+  border: 1px solid #e2d9c4;
+}
+
+.optionCorrect {
+  background: #e6f6ef;
+  border-color: var(--ct-green);
+  font-weight: 600;
+}
+
+.optionKey {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: #ede3cd;
+  color: #6b5b3e;
+}
+
+.optionCorrect .optionKey {
+  background: var(--ct-green);
+  color: #fff;
+}
+
+.optionTick {
+  margin-left: auto;
+  color: var(--ct-green);
+}
+
+.explainCard {
+  margin-top: 0.75rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 12px;
+  background: var(--ct-bg-surface);
+  border: 1px solid var(--ct-line);
+  font-size: 0.75rem;
+  line-height: 1.65;
+  color: var(--ct-text-muted);
+}
+
+.explainTag {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: var(--ct-gold);
+}
+
+/* ── Facts ── */
+.facts {
+  background: var(--ct-bg-surface);
+  border-bottom: 1px solid var(--ct-line);
+}
+
+.factsList {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.75rem 1.5rem;
+}
+
+.fact + .fact {
+  border-left: 1px solid var(--ct-line);
+}
+
+.factIcon {
+  flex: none;
+  color: var(--ct-gold);
+}
+
+.factValue {
+  display: block;
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ct-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.factLabel {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--ct-text-muted);
+}
+
+/* ── Download ── */
+.download {
+  padding: 5rem 0;
+  background: var(--ct-bg-surface);
+  border-top: 1px solid var(--ct-line);
+}
+
+.downloadInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.downloadTitle {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--ct-text);
+}
+
+.downloadLead {
+  margin: 0 0 1.75rem;
   line-height: 1.8;
-  margin: 0 auto 0.5rem;
+  color: var(--ct-text-muted);
 }
 
+.storeButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.storeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 170px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid var(--ct-line-strong);
+  color: var(--ct-text);
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: default;
+}
+
+.storeButton small {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--ct-text-subtle);
+}
+
+.newsletter iframe {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--ct-line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* ── Responsive ── */
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 4.5rem 1.5rem 3.5rem;
+  .hero {
+    padding: 3.5rem 0 3.5rem;
+  }
+
+  .heroGrid,
+  .downloadInner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+  }
+
+  .factsList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fact:nth-child(3) {
+    border-left: none;
+  }
+
+  .fact:nth-child(n + 3) {
+    border-top: 1px solid var(--ct-line);
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-top: 2rem;
+@media screen and (max-width: 480px) {
+  .fact {
+    padding: 1.25rem 0.5rem;
+    gap: 0.6rem;
+  }
+
+  .fact + .fact {
+    border-left: none;
+  }
+
+  .fact:nth-child(even) {
+    border-left: 1px solid var(--ct-line);
+    padding-left: 1rem;
+  }
+
+  .factValue {
+    font-size: 1.125rem;
+  }
+}
+
+.downloadTitle {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 2rem);
 }
