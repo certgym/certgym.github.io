@@ -74,7 +74,7 @@ function HomepageHeader(): ReactNode {
               </Link>
             </div>
             <p className={styles.heroNote}>
-              iOS・Android 即將上架　·　免費使用　·　不需註冊帳號
+              iOS・Android 即將上架　·　免費開始使用　·　不需註冊帳號
             </p>
           </div>
           <PhoneMock />
