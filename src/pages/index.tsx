@@ -60,8 +60,7 @@ function HomepageHeader(): ReactNode {
               考照像闖關
             </Heading>
             <p className={styles.heroLead}>
-              依官方考綱學知識點，再用歷屆試題與原創練習題刷題升段，答錯的題目自動回到複習清單。目前收錄
-              iPAS AI 應用規劃師、華語導遊、華語領隊、會計師 4 個類科。
+              先依官方考綱讀懂知識點，再用歷屆試題與原創題反覆練習；答錯的題目會自動回到複習清單，直到真正記住。
             </p>
             <div className={styles.heroActions}>
               <Link className={styles.btnPrimary} to="#download">
