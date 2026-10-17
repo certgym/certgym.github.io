@@ -158,7 +158,7 @@ function DownloadSection(): ReactNode {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="職場人的證照道館"
+      title="刷題升段，考照像闖關"
       description="CertGym 證照道館以知識點學習、原創練習、歷屆試題、閃卡與錯題複習，幫助職場人循序掌握證照所需能力。目前收錄 iPAS AI 應用規劃師、華語導遊、華語領隊、會計師，免註冊、可離線使用。"
     >
       <HomepageHeader />
