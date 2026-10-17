@@ -61,7 +61,7 @@ function HomepageHeader(): ReactNode {
             </Heading>
             <p className={styles.heroLead}>
               依官方考綱學知識點，再用歷屆試題與原創練習題刷題升段，答錯的題目自動回到複習清單。目前收錄
-              iPAS AI 應用規劃師、華語導遊、華語領隊、會計師、律師、護理師 6 個類科。
+              iPAS AI 應用規劃師、華語導遊、華語領隊、會計師 4 個類科。
             </p>
             <div className={styles.heroActions}>
               <Link className={styles.btnPrimary} to="#download">
@@ -86,8 +86,8 @@ function HomepageHeader(): ReactNode {
 
 function FactsBar(): ReactNode {
   const facts: { value: string; label: string; icon: IconName }[] = [
-    { value: "48", label: "個知識點", icon: "bookOpen" },
-    { value: "1,100", label: "題歷屆考題", icon: "fileText" },
+    { value: "32", label: "個知識點", icon: "bookOpen" },
+    { value: "550", label: "題歷屆考題", icon: "fileText" },
     { value: "閃卡", label: "零碎時間翻卡複習", icon: "layers" },
     { value: "每日一題", label: "推播提醒維持手感", icon: "bell" },
   ];
@@ -159,7 +159,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="職場人的證照道館"
-      description="CertGym 證照道館以知識點學習、原創練習、歷屆試題、閃卡與錯題複習，幫助職場人循序掌握證照所需能力。目前收錄 iPAS AI 應用規劃師、華語導遊、華語領隊、會計師、律師、護理師，免註冊、可離線使用。"
+      description="CertGym 證照道館以知識點學習、原創練習、歷屆試題、閃卡與錯題複習，幫助職場人循序掌握證照所需能力。目前收錄 iPAS AI 應用規劃師、華語導遊、華語領隊、會計師，免註冊、可離線使用。"
     >
       <HomepageHeader />
       <FactsBar />

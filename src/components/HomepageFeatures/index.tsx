@@ -102,13 +102,9 @@ const tracks: Track[] = [
     ],
   },
   {
-    icon: "landmark",
+    icon: "calculator",
     group: "專技人員",
-    items: [
-      { name: "會計師", session: "111 年專技高考", count: 150 },
-      { name: "律師", session: "115 年第一試", count: 300 },
-      { name: "護理師", session: "115 年第一次", count: 250 },
-    ],
+    items: [{ name: "會計師", session: "111 年專技高考", count: 150 }],
   },
 ];
 
@@ -188,7 +184,7 @@ function Coverage(): ReactNode {
       <div className="container">
         <SectionHeader
           kicker="收錄內容"
-          title="6 個類科，1,100 題歷屆考題"
+          title="4 個類科，550 題歷屆考題"
           lead="歷屆試題與答案取自考選部、交通部觀光署等主管機關公告的試題。每個類科另有依考綱整理的知識點與 CertGym 原創練習題，持續增加中。"
         />
         <div className={styles.trackGrid}>
