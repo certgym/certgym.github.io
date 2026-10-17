@@ -7,10 +7,15 @@ type Feature = {
   icon: IconName;
   title: string;
   description: string;
-  comingSoon?: boolean;
 };
 
 const features: Feature[] = [
+  {
+    icon: "bookOpen",
+    title: "知識點學習",
+    description:
+      "依官方考綱拆成科目、單元與知識點，每個知識點有講解、重點卡與常見誤區，讀完直接做 CertGym 原創練習題。",
+  },
   {
     icon: "listChecks",
     title: "題庫練習",
@@ -27,13 +32,13 @@ const features: Feature[] = [
     icon: "layers",
     title: "閃卡",
     description:
-      "同一份題庫換個方式讀。點一下翻面看答案，通勤、排隊的零碎時間也能複習。",
+      "在練習範圍選單點「用閃卡複習」，同一個範圍換個方式讀。點一下翻面看答案，零碎時間也能複習。",
   },
   {
     icon: "rotateCcw",
     title: "錯題複習",
     description:
-      "答錯的題目自動進入待複習清單，連續答對兩次才算精熟，不會刷完一輪就忘。",
+      "答錯的題目自動進入「複習」分頁，跨類科集中整理，連續答對兩次才算精熟。",
   },
   {
     icon: "bookmark",
@@ -53,23 +58,16 @@ const features: Feature[] = [
     description:
       "設定提醒時間與出題範圍，每天推播一題，點開通知就能作答，維持讀書節奏。",
   },
-  {
-    icon: "bookOpen",
-    title: "知識點學習",
-    description:
-      "依官方考綱拆解知識點，搭配原創練習題與解析，循序掌握證照所需能力。",
-    comingSoon: true,
-  },
 ];
 
 const reviewSteps = [
   {
     title: "作答",
-    description: "分科刷題或整份模擬考，答完立即看解析。",
+    description: "知識點練習、分科刷題或整份模擬考，答完立即看解析。",
   },
   {
     title: "進入待複習",
-    description: "答錯的題目自動排入該類科的待複習清單。",
+    description: "答錯的題目自動排入「複習」分頁的待複習清單。",
   },
   {
     title: "連續答對兩次",
@@ -83,47 +81,33 @@ const reviewSteps = [
 
 type Track = {
   icon: IconName;
-  gym: string;
+  group: string;
   items: { name: string; session: string; count: number }[];
 };
 
 const tracks: Track[] = [
   {
     icon: "cpu",
-    gym: "科技認證道館",
+    group: "AI 與數位",
     items: [
       { name: "iPAS AI 應用規劃師 初級", session: "114 年第四次", count: 100 },
     ],
   },
   {
     icon: "plane",
-    gym: "觀光旅遊道館",
+    group: "觀光旅遊",
     items: [
       { name: "華語導遊", session: "112 年普考", count: 150 },
       { name: "華語領隊", session: "112 年普考", count: 150 },
     ],
   },
   {
-    icon: "calculator",
-    gym: "財經地政道館",
-    items: [{ name: "會計師", session: "111 年專技高考", count: 150 }],
-  },
-  {
-    icon: "scale",
-    gym: "法律司法道館",
-    items: [{ name: "律師", session: "115 年第一試", count: 300 }],
-  },
-  {
-    icon: "stethoscope",
-    gym: "醫護道館",
-    items: [{ name: "護理師", session: "115 年第一次", count: 250 }],
-  },
-  {
     icon: "landmark",
-    gym: "公職道館",
+    group: "專技人員",
     items: [
-      { name: "地方特考三等 一般民政", session: "114 年", count: 110 },
-      { name: "地方特考三等 資訊處理", session: "114 年", count: 60 },
+      { name: "會計師", session: "111 年專技高考", count: 150 },
+      { name: "律師", session: "115 年第一試", count: 300 },
+      { name: "護理師", session: "115 年第一次", count: 250 },
     ],
   },
 ];
@@ -154,8 +138,8 @@ function Features(): ReactNode {
       <div className="container">
         <SectionHeader
           kicker="功能"
-          title="一套題庫，四種練法"
-          lead="分科刷題、整份模擬考、閃卡、錯題複習共用同一份歷屆試題，練習紀錄與收藏彼此連動。"
+          title="先學懂，再刷熟"
+          lead="依知識點學概念，用歷屆試題與原創練習題刷題，答錯的題目自動回到複習清單。學習、練習、複習與紀錄彼此連動。"
         />
         <div className={styles.featureGrid}>
           {features.map((f) => (
@@ -163,10 +147,7 @@ function Features(): ReactNode {
               <span className={styles.featureIcon}>
                 <Icon name={f.icon} size={22} />
               </span>
-              <h3 className={styles.featureTitle}>
-                {f.title}
-                {f.comingSoon && <span className={styles.soonTag}>即將推出</span>}
-              </h3>
+              <h3 className={styles.featureTitle}>{f.title}</h3>
               <p className={styles.featureDesc}>{f.description}</p>
             </article>
           ))}
@@ -207,15 +188,15 @@ function Coverage(): ReactNode {
       <div className="container">
         <SectionHeader
           kicker="收錄內容"
-          title="8 個類科，1,270 題歷屆考題"
-          lead="題目與答案取自考選部、交通部觀光署等主管機關公告的歷屆試題，持續增加中。"
+          title="6 個類科，1,100 題歷屆考題"
+          lead="歷屆試題與答案取自考選部、交通部觀光署等主管機關公告的試題。每個類科另有依考綱整理的知識點與 CertGym 原創練習題，持續增加中。"
         />
         <div className={styles.trackGrid}>
           {tracks.map((t) => (
-            <div key={t.gym} className={styles.track}>
+            <div key={t.group} className={styles.track}>
               <div className={styles.trackHead}>
                 <Icon name={t.icon} size={20} />
-                <span>{t.gym}</span>
+                <span>{t.group}</span>
               </div>
               <ul className={styles.trackList}>
                 {t.items.map((item) => (
@@ -233,7 +214,7 @@ function Coverage(): ReactNode {
         <div className={styles.notice}>
           <Icon name="sparkles" size={18} className={styles.noticeIcon} />
           <p>
-            解析主要由 AI 輔助生成，僅供參考，App 內均標示「AI
+            解析內容主要由 AI 輔助生成，僅供參考，App 內均標示「AI
             解析」。發現錯誤可從「設定 → 意見回饋」回報。CertGym
             為獨立開發的學習工具，與考選部及任何考試主管機關無隸屬或合作關係。
           </p>

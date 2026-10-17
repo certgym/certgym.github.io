@@ -38,25 +38,6 @@
   color: var(--ct-text-muted);
 }
 
-.heroSoon {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem;
-  margin: -0.75rem 0 2rem;
-  font-size: 0.9375rem;
-  color: var(--ct-text-muted);
-}
-
-.heroSoonTag {
-  padding: 0.15rem 0.55rem;
-  border-radius: 6px;
-  border: 1px solid var(--ct-line-strong);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--ct-gold);
-}
-
 .heroActions {
   display: flex;
   flex-wrap: wrap;
