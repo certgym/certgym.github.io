@@ -15,14 +15,14 @@ CertGym 的題目與答案取自主管機關公告的歷屆試題。報名資格
 
 | 道館 | 類科 | App 收錄梯次 | 官方資訊 |
 | --- | --- | --- | --- |
-| 法律司法 | 律師 | 115 年第一試（300 題） | [考選部](https://www.moex.gov.tw) |
-| 醫護 | 護理師 | 115 年第一次（250 題） | [考選部](https://www.moex.gov.tw) |
-| 財經地政 | 會計師 | 111 年專技高考（150 題） | [考選部](https://www.moex.gov.tw) |
-| 公職 | 地方特考三等 一般民政 | 114 年（110 題） | [考選部](https://www.moex.gov.tw) |
-| 公職 | 地方特考三等 資訊處理 | 114 年（60 題） | [考選部](https://www.moex.gov.tw) |
+| 科技認證 | iPAS AI 應用規劃師 初級 | 114 年第四次（100 題） | [iPAS 產業人才能力鑑定](https://www.ipas.org.tw) |
 | 觀光旅遊 | 華語導遊 | 112 年普考（150 題） | [考選部](https://www.moex.gov.tw)・[交通部觀光署](https://admin.taiwan.net.tw) |
 | 觀光旅遊 | 華語領隊 | 112 年普考（150 題） | [考選部](https://www.moex.gov.tw)・[交通部觀光署](https://admin.taiwan.net.tw) |
-| 科技認證 | iPAS AI 應用規劃師 初級 | 114 年第四次（100 題） | [iPAS 產業人才能力鑑定](https://www.ipas.org.tw) |
+| 財經地政 | 會計師 | 111 年專技高考（150 題） | [考選部](https://www.moex.gov.tw) |
+| 法律司法 | 律師 | 115 年第一試（300 題） | [考選部](https://www.moex.gov.tw) |
+| 醫護 | 護理師 | 115 年第一次（250 題） | [考選部](https://www.moex.gov.tw) |
+| 公職 | 地方特考三等 一般民政 | 114 年（110 題） | [考選部](https://www.moex.gov.tw) |
+| 公職 | 地方特考三等 資訊處理 | 114 年（60 題） | [考選部](https://www.moex.gov.tw) |
 
 考選部舉辦的考試，可以在[考選部考畢試題查詢平臺](https://wwwq.moex.gov.tw/exam/wFrmExamQandASearch.aspx)下載歷年試題與測驗式試題答案。
 

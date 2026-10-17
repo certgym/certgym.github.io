@@ -9,21 +9,21 @@ import styles from "./index.module.css";
 
 function PhoneMock(): ReactNode {
   const options = [
-    { key: "A", text: "當地警察局" },
-    { key: "B", text: "我國駐外館處", correct: true },
-    { key: "C", text: "搭乘的航空公司" },
-    { key: "D", text: "當地移民機關" },
+    { key: "A", text: "準確率（Accuracy）" },
+    { key: "B", text: "F1 分數", correct: true },
+    { key: "C", text: "均方誤差（MSE）" },
+    { key: "D", text: "決定係數（R²）" },
   ];
   return (
     <div className={styles.phone} aria-hidden="true">
       <div className={styles.phoneScreen}>
         <div className={styles.phoneBar}>
-          <span>華語領隊 · 領隊實務</span>
+          <span>iPAS AI 應用規劃師 · 初級</span>
           <span className={styles.phoneProgress}>7 / 20</span>
         </div>
         <div className={styles.questionCard}>
           <p className={styles.questionText}>
-            旅客於國外遺失護照，領隊應優先協助其向下列何者申請補發？
+            類別不平衡時，下列何者較適合評估分類模型的表現？
           </p>
           {options.map((o) => (
             <div
@@ -40,7 +40,7 @@ function PhoneMock(): ReactNode {
         </div>
         <div className={styles.explainCard}>
           <span className={styles.explainTag}>AI 解析</span>
-          護照遺失應先報案取得證明，再向駐外館處申請補發或入國證明書。
+          類別不平衡時準確率容易失真；F1 分數兼顧精確率與召回率，較能反映少數類別的表現。
         </div>
       </div>
     </div>
@@ -53,15 +53,19 @@ function HomepageHeader(): ReactNode {
       <div className="container">
         <div className={styles.heroGrid}>
           <div className={styles.heroText}>
-            <p className={styles.eyebrow}>國家考試・專業證照 歷屆試題與模擬考練習</p>
+            <p className={styles.eyebrow}>CertGym 職場人的證照道館</p>
             <Heading as="h1" className={styles.heroTitle}>
               刷題升段，
               <br />
               考照像闖關
             </Heading>
             <p className={styles.heroLead}>
-              律師、護理師、會計師、地方特考、導遊領隊、iPAS
-              的歷屆考題，整理成題庫、整份模擬考、閃卡與錯題複習。每個類科是一座道館，練得越多，段位越高。
+              以歷屆試題、模擬考、閃卡與錯題複習，幫助你循序掌握證照所需能力。目前收錄
+              iPAS AI 應用規劃師、導遊領隊、會計師、律師、護理師、地方特考等 8 個類科。
+            </p>
+            <p className={styles.heroSoon}>
+              <span className={styles.heroSoonTag}>即將推出</span>
+              知識點學習與原創練習，依官方考綱循序學習
             </p>
             <div className={styles.heroActions}>
               <Link className={styles.btnPrimary} to="#download">
@@ -158,8 +162,8 @@ function DownloadSection(): ReactNode {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="國家考試與證照歷屆試題、模擬考練習"
-      description="CertGym 證照道館收錄律師、護理師、會計師、地方特考、華語導遊領隊、iPAS AI 應用規劃師等歷屆試題，提供題庫練習、整份模擬考、閃卡、錯題複習與收藏集合。免註冊、可離線使用。"
+      title="職場人的證照道館"
+      description="CertGym 證照道館以歷屆試題、模擬考、閃卡與錯題複習，幫助職場人循序掌握證照所需能力。目前收錄 iPAS AI 應用規劃師、華語導遊領隊、會計師、律師、護理師、地方特考等類科，免註冊、可離線使用。"
     >
       <HomepageHeader />
       <FactsBar />

@@ -74,6 +74,18 @@
   color: var(--ct-text);
 }
 
+.soonTag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--ct-line-strong);
+  font-size: 0.75rem;
+  font-weight: 600;
+  vertical-align: 0.15em;
+  color: var(--ct-gold);
+}
+
 .featureDesc {
   margin: 0;
   font-size: 0.9375rem;

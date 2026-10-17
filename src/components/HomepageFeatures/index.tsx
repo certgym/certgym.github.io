@@ -7,6 +7,7 @@ type Feature = {
   icon: IconName;
   title: string;
   description: string;
+  comingSoon?: boolean;
 };
 
 const features: Feature[] = [
@@ -53,10 +54,11 @@ const features: Feature[] = [
       "設定提醒時間與出題範圍，每天推播一題，點開通知就能作答，維持讀書節奏。",
   },
   {
-    icon: "wifiOff",
-    title: "離線使用",
+    icon: "bookOpen",
+    title: "知識點學習",
     description:
-      "第一次開啟下載題庫後即可離線練習，搭捷運、在圖書館沒有網路也不受影響。",
+      "依官方考綱拆解知識點，搭配原創練習題與解析，循序掌握證照所需能力。",
+    comingSoon: true,
   },
 ];
 
@@ -87,26 +89,10 @@ type Track = {
 
 const tracks: Track[] = [
   {
-    icon: "scale",
-    gym: "法律司法道館",
-    items: [{ name: "律師", session: "115 年第一試", count: 300 }],
-  },
-  {
-    icon: "stethoscope",
-    gym: "醫護道館",
-    items: [{ name: "護理師", session: "115 年第一次", count: 250 }],
-  },
-  {
-    icon: "calculator",
-    gym: "財經地政道館",
-    items: [{ name: "會計師", session: "111 年專技高考", count: 150 }],
-  },
-  {
-    icon: "landmark",
-    gym: "公職道館",
+    icon: "cpu",
+    gym: "科技認證道館",
     items: [
-      { name: "地方特考三等 一般民政", session: "114 年", count: 110 },
-      { name: "地方特考三等 資訊處理", session: "114 年", count: 60 },
+      { name: "iPAS AI 應用規劃師 初級", session: "114 年第四次", count: 100 },
     ],
   },
   {
@@ -118,10 +104,26 @@ const tracks: Track[] = [
     ],
   },
   {
-    icon: "cpu",
-    gym: "科技認證道館",
+    icon: "calculator",
+    gym: "財經地政道館",
+    items: [{ name: "會計師", session: "111 年專技高考", count: 150 }],
+  },
+  {
+    icon: "scale",
+    gym: "法律司法道館",
+    items: [{ name: "律師", session: "115 年第一試", count: 300 }],
+  },
+  {
+    icon: "stethoscope",
+    gym: "醫護道館",
+    items: [{ name: "護理師", session: "115 年第一次", count: 250 }],
+  },
+  {
+    icon: "landmark",
+    gym: "公職道館",
     items: [
-      { name: "iPAS AI 應用規劃師 初級", session: "114 年第四次", count: 100 },
+      { name: "地方特考三等 一般民政", session: "114 年", count: 110 },
+      { name: "地方特考三等 資訊處理", session: "114 年", count: 60 },
     ],
   },
 ];
@@ -161,7 +163,10 @@ function Features(): ReactNode {
               <span className={styles.featureIcon}>
                 <Icon name={f.icon} size={22} />
               </span>
-              <h3 className={styles.featureTitle}>{f.title}</h3>
+              <h3 className={styles.featureTitle}>
+                {f.title}
+                {f.comingSoon && <span className={styles.soonTag}>即將推出</span>}
+              </h3>
               <p className={styles.featureDesc}>{f.description}</p>
             </article>
           ))}
